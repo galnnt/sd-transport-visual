@@ -4,7 +4,7 @@
     import mapboxgl from 'mapbox-gl';
     import 'mapbox-gl/dist/mapbox-gl.css';
 
-    mapboxgl.accessToken = "pk.eyJ1IjoiYzZsdW8iLCJhIjoiY2x3NGpsMWJ2MTUxNDJtcHZiaDlwenl0aCJ9.E1SLnII70oVnQcPYAizY_w";
+    mapboxgl.accessToken = "pk.eyJ1IjoiZ2xudCIsImEiOiJjbHc0bWV4NDgxN2JxMm5yc2Z3Mms3Nmc0In0.o-4UKT8njGEiMTBw3NNUSg";
     let map;
     let svg;
     let stopsData = { features: [] };
@@ -45,6 +45,8 @@
             map.on("move", drawStops); 
             map.on("zoom", drawStops); 
         });
+
+        console.log("Map loaded!");
 
     });
 
@@ -105,8 +107,10 @@
 </script>
 
 <main>
-    <div id="map"></div>
-    <div class="overlay">
+    <div id="map">
+    </div>
+
+    <div class="text-overlay">
         <label>
             <span style="font-size: 14px">
                 Wheelchair Accessible Only
@@ -170,5 +174,22 @@
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #map {
+        width: 100vw;
+        height: 100vh;
+        margin: 0; /* Remove any default margin */
+        padding: 0; /* Remove any default padding */
+        position: fixed; /* Position the map fixed to the viewport */
+        top: 0;
+        left: 0;
+    }
+
+    .text-overlay {
+        position: absolute;
+        top: 10px; /* Adjust top position as needed */
+        right: 10px; /* Adjust right position as needed */
+        z-index: 1000; /* Ensure the text appears above the map */
     }
 </style>

@@ -60,7 +60,7 @@
         }
 
         if (agencyFilter !== "all") {
-            filteredDçata = filteredData.filter(d => d.properties.stop_agncy === agencyFilter);
+            filteredData = filteredData.filter(d => d.properties.stop_agncy === agencyFilter);
         }
 
         pointCount = filteredData.length;

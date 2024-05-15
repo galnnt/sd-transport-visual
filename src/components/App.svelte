@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import * as d3 from 'd3';
     import mapboxgl from 'mapbox-gl';
+    import 'mapbox-gl/dist/mapbox-gl.css';
 
     mapboxgl.accessToken = "pk.eyJ1IjoiYzZsdW8iLCJhIjoiY2x3NGpsMWJ2MTUxNDJtcHZiaDlwenl0aCJ9.E1SLnII70oVnQcPYAizY_w";
     let map;

@@ -105,6 +105,7 @@
 </script>
 
 <main>
+    <div id="map"></div>
     <div class="overlay">
         <label>
             <span style="font-size: 14px">
